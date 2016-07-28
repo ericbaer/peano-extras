@@ -101,7 +101,7 @@ type P1000 = Plus1000 Z
 
 -- | A class to allow us to examine type-level Peano numbers at the value level.
 class Nat (p :: Peano) where
-    nat :: (Integral n) => proxy p -> n
+    nat :: proxy p -> Int
     demotePeano :: proxy p -> Peano
 
 -- | The base case
